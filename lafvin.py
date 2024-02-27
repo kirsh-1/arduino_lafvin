@@ -19,9 +19,9 @@ class Lafvin(ArduinoConnection):
         self._serial.write(b'd')
         time.sleep(.5)
         result = self._serial.readline().decode().rstrip()
-        if result
+        if result:
             to_int = int(float(result))
-            return result
+            return to_int
         else:
             raise Exception('Seriar.readline() is None')
 
